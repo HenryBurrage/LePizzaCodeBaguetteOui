@@ -4,6 +4,8 @@ import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import javax.swing.*;
+import javax.swing.text.html.FormSubmitEvent;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.sql.PreparedStatement;
@@ -58,12 +60,16 @@ public class Users{
 
     @POST
     @Path("add")
-    public String UsersAdd(@FormDataParam("UserID") Integer UserID, @FormDataParam("UserName") String UserName) {
+    public String UsersAdd(@FormDataParam("UserID") Integer UserID, @FormDataParam("Email") String Email, @FormDataParam("Password") String Password, @FormDataParam("AddressLine1") String AddressLine1, @FormDataParam("SessionToken") String SessionToken, @FormDataParam("Admin") Boolean Admin) {
         System.out.println("Invoked Users.UsersAdd()");
         try {
-            PreparedStatement ps = server.Main.db.prepareStatement("INSERT INTO Users (UserID, UserName) VALUES (?, ?)");
+            PreparedStatement ps = server.Main.db.prepareStatement("INSERT INTO Users (UserID, Email, Password, AddressLine1, SessionToken, Admin) VALUES (?, ?, ?, ?, ?, ?)");
             ps.setInt(1, UserID);
-            ps.setString(2, UserName);
+            ps.setString(2, Email);
+            ps.setString(3,Password);
+            ps.setString(4, AddressLine1);
+            ps.setString(5, SessionToken);
+            ps.setBoolean(6, Admin);
             ps.execute();
             return "{\"OK\": \"Added user.\"}";
         } catch (Exception exception) {
