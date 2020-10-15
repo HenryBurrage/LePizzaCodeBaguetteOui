@@ -48,7 +48,7 @@ public class Users{
             JSONObject response = new JSONObject();                                    // There is no need for an array as there is only one object, if no user matches the ID supplied, an empty object will be returned.
             if (results.next()== true) {
                 response.put("UserID", UserID);
-                response.put("Email ", results.getString(1));
+                response.put("Email", results.getString(1));
                 response.put("SessionToken", results.getInt(2));
             }
             return response.toString();

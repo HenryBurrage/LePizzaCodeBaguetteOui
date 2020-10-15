@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-    .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-    }
-</style>
 <head>
     <meta charset="UTF-8">
-    <title>Bruhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</title>
+    <title>The Quiz</title>
+    <script src="/client/js/users.js"></script>
+    <link rel="stylesheet" type="text/css" href="/client/css/styles.css">
 </head>
 <body>
-<p style="font-size:100px;padding:100px;text-align:center;font-family:'Comic Sans MS'">I hate Oscar</p>
-<img src="img/logan.jpg" height="277" width="1545" class="center"/>
+
+<button onclick='getUsersList();'>Run getUsersList</button>
+<table id="UsersTable"></table>
+<br>
+
+<form id="userDetails">
+    User id: <input type="text" id="UserID">
+</form>
+<button onclick='getUser();'>Run getUser</button>
+<div id="DisplayOneUser"></div>
+<br>
+
+
+<form id="InputUserDetails">
+    Email: <input type="text" name="Email">
+    Password: <input type="text" name="Password">
+    Address Line 1: <input type="text" name="AddressLine1">
+    Address Line 2: <input type="text" name="AddressLine2">
+    Admin: <input type="checkbox" name="Admin">
+</form>
+<button onclick='addUser();'>Add User</button>
 </body>
 </html>
+
+
