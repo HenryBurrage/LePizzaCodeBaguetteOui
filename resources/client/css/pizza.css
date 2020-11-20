@@ -1,0 +1,15 @@
+.pagebg {
+    background-color: #a8d1ff;
+}
+.image {
+    width:200px;
+    height:200px;
+    padding: 20px 40px 20px 40px;
+    transition: transform .2s;
+    cursor: pointer;
+
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
