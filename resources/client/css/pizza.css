@@ -1,14 +1,33 @@
 .pagebg {
     background-color: #a8d1ff;
 }
+
+.pictures {
+    position: fixed;
+    left: 100px;
+    top: 100px;
+}
+
 .image {
     width:200px;
     height:200px;
     cursor: pointer;
+    margin: 20px;
+    background-color: white;
+    border-radius:20px;
+    box-shadow: 0 9px #bdbdbd;
 }
 
 .image:hover {
-    transform: scale(1.05);
+    background-color: #f9f9f9;
+    box-shadow: 0 7px #acacac;
+    transform: translateY(2px);
+}
+
+.image:active {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px #9b9b9b;
+    transform: translateY(5px);
 }
 
 .button {

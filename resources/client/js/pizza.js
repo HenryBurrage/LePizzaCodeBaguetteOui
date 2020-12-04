@@ -4,13 +4,12 @@ function getImageData(img) {
     return (src);
 }
 
-function getToppingsList() {
-    if (document.getElementById("ham").style.filter == "grayscale(100%)") {
-        document.getElementById("ham").style.filter = "grayscale(0%)";
+function getToppingsList(element) {
+    if (element.style.filter == "grayscale(100%)") {
+        (element).style.filter = "grayscale(0%)";
     } else {
-        document.getElementById("ham").style.filter = "grayscale(100%)";
+        (element).style.filter = "grayscale(100%)";
     }
-
     console.log("Invoked ToppingsList()");     //console.log your BFF for debugging client side - also use debugger statement
     const url = "/toppings/list/";    		// API method on web server will be in Users class, method list
     fetch(url, {
