@@ -121,6 +121,9 @@ public class Users{
     public String UsersLogin(@FormDataParam("Email") String Email, @FormDataParam("Password") String Password) {
         System.out.println("Invoked loginUser() on path users/login");
         try {
+            if (Email.length() == 0){
+                System.out.println("Email has been compared to null");
+            }
             PreparedStatement ps1 = server.Main.db.prepareStatement("SELECT Password FROM Users WHERE Email = ?");
             ps1.setString(1, Email);
             ResultSet loginResults = ps1.executeQuery();
