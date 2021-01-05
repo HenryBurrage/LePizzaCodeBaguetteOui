@@ -65,3 +65,15 @@
     top:10px;
     right:10px;
 }
+
+.pizzabase {
+    background-position: right bottom;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.pizzatops {
+    position: absolute;
+    margin-left: 1050px;
+    margin-top: 200px;
+}

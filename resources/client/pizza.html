@@ -9,21 +9,34 @@
 </head>
 <body class="pagebg">
 <div class = "pictures">
-<img class="image" id="ham" src="img/Ham.png" height="512" width="512" onclick="getToppingsList(this)">
-<img class="image" id="chicken" src="img/chicken.png" height="512" width="512" onclick="getToppingsList(this)">
-<img class="image" id="bacon" src="img/bacon.png" height="512" width="512" onclick="getToppingsList(this)">
-<img class="image" id="pepperoni" src="img/pepperoni.png" height="512" width="512" onclick="getToppingsList(this)">
+<img class="image" id="ham" src="img/Ham.png" height="512" width="512" onclick="getToppingsList(this); toggleHam()">
+<img class="image" id="chicken" src="img/chicken.png" height="512" width="512" onclick="getToppingsList(this); toggleChicken()">
+<img class="image" id="bacon" src="img/bacon.png" height="512" width="512" onclick="getToppingsList(this); toggleBacon()">
+<img class="image" id="pepperoni" src="img/pepperoni.png" height="512" width="512" onclick="getToppingsList(this); togglePepperoni()">
 <div></div>
-<img class="image" id="chorizo" src="img/chorizo.png" height="512" width="512" onclick="getToppingsList(this)">
-<img class="image" id="olives" src="img/olives.png" height="512" width="512" onclick="getToppingsList(this)">
-<img class="image" id="onions" src="img/onions.png" height="512" width="512" onclick="getToppingsList(this)">
-<img class="image" id="pepper" src="img/pepper.png" height="512" width="512" onclick="getToppingsList(this)">
+<img class="image" id="chorizo" src="img/chorizo.png" height="512" width="512" onclick="getToppingsList(this); toggleChorizo()">
+<img class="image" id="olives" src="img/olives.png" height="512" width="512" onclick="getToppingsList(this); toggleOlive()">
+<img class="image" id="onions" src="img/onions.png" height="512" width="512" onclick="getToppingsList(this); toggleOnion()">
+<img class="image" id="pepper" src="img/pepper.png" height="512" width="512" onclick="getToppingsList(this); togglePepper()">
 <div></div>
-<img class="image" id="pineapple" src="img/pineapple.png" height="512" width="512" onclick="getToppingsList(this)">
-<img class="image" id="tomato" src="img/tomato.png" height="512" width="512" onclick="getToppingsList(this)">
+<img class="image" id="pineapple" src="img/pineapple.png" height="512" width="512" onclick="getToppingsList(this); togglePineapple()">
+<img class="image" id="tomato" src="img/tomato.png" height="512" width="512" onclick="getToppingsList(this); toggleTomato()">
 </div>
 <table id="ToppingsTable"></table>
 
+<div class = "pizzabase">
+    <img class = "pizzatops" src="img/Base.png" height="549" width="844"/>
+    <img class = "pizzatops" id="baconpic" src="img/BaconLayer.png" height="549" width="844" style = "visibility:hidden"/>
+    <img class = "pizzatops" id="chickenpic" src="img/ChickenLayer.png" height="549" width="844" style = "visibility:hidden"/>
+    <img class = "pizzatops" id="chorizopic" src="img/ChorizoLayer.png" height="549" width="844" style = "visibility:hidden"/>
+    <img class = "pizzatops" id="hampic" src="img/HamLayer.png" height="549" width="844" style = "visibility:hidden"/>
+    <img class = "pizzatops" id="olivepic" src="img/OliveLayer.png" height="549" width="844" style = "visibility:hidden"/>
+    <img class = "pizzatops" id="onionpic" src="img/OnionLayer.png" height="549" width="844" style = "visibility:hidden"/>
+    <img class = "pizzatops" id="pepperpic" src="img/PepperLayer.png" height="549" width="844" style = "visibility:hidden"/>
+    <img class = "pizzatops" id="pepperonipic" src="img/PepperoniLayer.png" height="549" width="844" style = "visibility:hidden"/>
+    <img class = "pizzatops" id="pineapplepic" src="img/PineappleLayer.png" height="549" width="844" style = "visibility:hidden"/>
+    <img class = "pizzatops" id="tomatopic" src="img/TomatoLayer.png" height="549" width="844" style = "visibility:hidden"/>
+</div>
 <div class = controller>
 <audio controls loop autoplay>
 <source src="img/SpiderMan.mp3" type="audio/mpeg">
