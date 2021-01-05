@@ -123,6 +123,7 @@ public class Users{
         try {
             if (Email.length() == 0){
                 System.out.println("Email has been compared to null");
+                return "{\"Error\": \"Nothing has been entered.\"}";
             }
             PreparedStatement ps1 = server.Main.db.prepareStatement("SELECT Password FROM Users WHERE Email = ?");
             ps1.setString(1, Email);
