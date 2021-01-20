@@ -7,20 +7,20 @@
     <link rel="stylesheet" href="css/pizza.css">
 
 </head>
-<body class="pagebg">
+<body style="background-color: #a8d1ff">
 <div class = "pictures">
-<img class="image" id="ham" src="img/Ham.png" height="512" width="512" onclick="getToppingsList(this); toggleHam()">
-<img class="image" id="chicken" src="img/chicken.png" height="512" width="512" onclick="getToppingsList(this); toggleChicken()">
-<img class="image" id="bacon" src="img/bacon.png" height="512" width="512" onclick="getToppingsList(this); toggleBacon()">
-<img class="image" id="pepperoni" src="img/pepperoni.png" height="512" width="512" onclick="getToppingsList(this); togglePepperoni()">
+<img class="image" id="ham" src="img/Ham.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('hampic'))">
+<img class="image" id="chicken" src="img/chicken.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('chickenpic'))">
+<img class="image" id="bacon" src="img/bacon.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('baconpic'))">
+<img class="image" id="pepperoni" src="img/pepperoni.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('pepperonipic'))">
 <div></div>
-<img class="image" id="chorizo" src="img/chorizo.png" height="512" width="512" onclick="getToppingsList(this); toggleChorizo()">
-<img class="image" id="olives" src="img/olives.png" height="512" width="512" onclick="getToppingsList(this); toggleOlive()">
-<img class="image" id="onions" src="img/onions.png" height="512" width="512" onclick="getToppingsList(this); toggleOnion()">
-<img class="image" id="pepper" src="img/pepper.png" height="512" width="512" onclick="getToppingsList(this); togglePepper()">
+<img class="image" id="chorizo" src="img/chorizo.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('chorizopic'))">
+<img class="image" id="olives" src="img/olives.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('olivepic'))">
+<img class="image" id="onions" src="img/onions.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('onionpic'))">
+<img class="image" id="pepper" src="img/pepper.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('pepperpic'))">
 <div></div>
-<img class="image" id="pineapple" src="img/pineapple.png" height="512" width="512" onclick="getToppingsList(this); togglePineapple()">
-<img class="image" id="tomato" src="img/tomato.png" height="512" width="512" onclick="getToppingsList(this); toggleTomato()">
+<img class="image" id="pineapple" src="img/pineapple.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('pineapplepic'))">
+<img class="image" id="tomato" src="img/tomato.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('tomatopic'))">
 </div>
 <table id="ToppingsTable"></table>
 

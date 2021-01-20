@@ -1,0 +1,27 @@
+.images{
+    text-align: center;
+}
+
+.image {
+    width:220px;
+    height:100px;
+    cursor: pointer;
+    margin: 20px;
+    background-color: #93b6e3;
+    border-radius:20px;
+    box-shadow: 0 9px #bdbdbd;
+    width: 13em;
+
+}
+
+.image:hover {
+    background-color: #7c9fcc;
+    box-shadow: 0 7px #acacac;
+    transform: translateY(2px);
+}
+
+.image:active {
+    background-color: #5a76a0;
+    box-shadow: 0 4px #9b9b9b;
+    transform: translateY(5px);
+}

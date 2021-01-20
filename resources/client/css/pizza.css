@@ -1,7 +1,3 @@
-.pagebg {
-    background-color: #a8d1ff;
-}
-
 .pictures {
     position: fixed;
     left: 100px;
@@ -16,6 +12,7 @@
     background-color: white;
     border-radius:20px;
     box-shadow: 0 9px #bdbdbd;
+    filter: grayscale(100%);
 }
 
 .image:hover {
