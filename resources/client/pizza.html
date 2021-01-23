@@ -9,18 +9,18 @@
 </head>
 <body style="background-color: #a8d1ff">
 <div class = "pictures">
-<img class="image" id="ham" src="img/Ham.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('hampic'))">
-<img class="image" id="chicken" src="img/chicken.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('chickenpic'))">
-<img class="image" id="bacon" src="img/bacon.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('baconpic'))">
-<img class="image" id="pepperoni" src="img/pepperoni.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('pepperonipic'))">
+<img class="image" id="ham" src="img/Ham.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('hampic')); updatePrice(this)">
+<img class="image" id="chicken" src="img/chicken.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('chickenpic')); updatePrice(this)">
+<img class="image" id="bacon" src="img/bacon.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('baconpic')); updatePrice(this)">
+<img class="image" id="pepperoni" src="img/pepperoni.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('pepperonipic')); updatePrice(this)">
 <div></div>
-<img class="image" id="chorizo" src="img/chorizo.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('chorizopic'))">
-<img class="image" id="olives" src="img/olives.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('olivepic'))">
-<img class="image" id="onions" src="img/onions.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('onionpic'))">
-<img class="image" id="pepper" src="img/pepper.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('pepperpic'))">
+<img class="image" id="chorizo" src="img/chorizo.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('chorizopic')); updatePrice(this)">
+<img class="image" id="olives" src="img/olives.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('olivepic')); updatePrice(this)">
+<img class="image" id="onions" src="img/onions.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('onionpic')); updatePrice(this)">
+<img class="image" id="pepper" src="img/pepper.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('pepperpic')); updatePrice(this)">
 <div></div>
-<img class="image" id="pineapple" src="img/pineapple.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('pineapplepic'))">
-<img class="image" id="tomato" src="img/tomato.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('tomatopic'))">
+<img class="image" id="pineapple" src="img/pineapple.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('pineapplepic')); updatePrice(this)">
+<img class="image" id="tomato" src="img/tomato.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('tomatopic')); updatePrice(this)">
 </div>
 <table id="ToppingsTable"></table>
 
@@ -37,11 +37,17 @@
     <img class = "pizzatops" id="pineapplepic" src="img/PineappleLayer.png" height="549" width="844" style = "visibility:hidden"/>
     <img class = "pizzatops" id="tomatopic" src="img/TomatoLayer.png" height="549" width="844" style = "visibility:hidden"/>
 </div>
-<div class = controller>
-<audio controls loop autoplay>
-<source src="img/SpiderMan.mp3" type="audio/mpeg">
-</audio>
+
+<div class="pricetext">
+        5.00
 </div>
+
+<div class = controller>
+    <audio controls loop autoplay>
+    <source src="img/SpiderMan.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
 </body>
 </html>
 

@@ -5,12 +5,30 @@
     <title>Login</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.js"></script>
     <script src="/client/js/users.js"></script>
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body style="background-color: #a8d1ff">
-<form id="LoginForm">
-    <input type="text" name="Email" id="Email">
-    <input type="password" name="Password" id="Password">
-</form>
-<button class="button" onclick='UsersLogin();'>LOGIN</button>  <!--UsersLogin()in users.js-->
+
+<div class="break">
+</div>
+<div class="container">
+    <form id="LoginForm">
+        <input type="text" placeholder="Enter Email" name="Email" id="Email" required>
+        <div></div>
+        <input type="password" placeholder="Enter Password" name="Password" id="Password" required>
+        <div style="padding: 10px;">
+        </div>
+    </form>
+    <button class="button" onclick='UsersLogin();'><b>LOGIN</b></button>  <!--UsersLogin()in users.js-->
+    <div class="break">
+    </div>
+    <div style="padding: 10px;"></div>
+    <div style="padding: 10px;"></div>
+    <div style="padding: 10px;"></div>
+    <img src="img/Don't have an account.png" height="74" width="665"/>
+    <div></div>
+    <div style="padding: 10px;"></div>
+    <button class="button" onclick="document.location='register.html'"><b>REGISTER</b></button>
+</div>
 </body>
 </html>

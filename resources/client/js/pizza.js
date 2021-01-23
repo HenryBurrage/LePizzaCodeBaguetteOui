@@ -44,3 +44,13 @@ function toggle(element){
         element.style.visibility = "hidden";
     }
 }
+
+function updatePrice(element){
+    let text = document.getElementsByClassName("pricetext");
+    console.log(parseFloat(text));
+    if (element.style.filter == "grayscale(0%)") {
+        text.innerHTML = text.value += 1;
+    } else {
+        text.innerHTML = text -= 1;
+    }
+}
