@@ -78,5 +78,11 @@
 .pricetext{
     font-family: Times New Roman, Arial;
     font-size: 500%;
-    padding: 650px 0px 0px 1380px;
+    padding: 670px 0px 0px 1380px;
+}
+
+.poundsymbol{
+    font-family: Times New Roman, Arial;
+    font-size: 500%;
+    padding: 728px 0px 0px 1305px;
 }

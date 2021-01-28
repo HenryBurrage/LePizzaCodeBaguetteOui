@@ -9,18 +9,18 @@
 </head>
 <body style="background-color: #a8d1ff">
 <div class = "pictures">
-<img class="image" id="ham" src="img/Ham.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('hampic')); updatePrice(this)">
-<img class="image" id="chicken" src="img/chicken.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('chickenpic')); updatePrice(this)">
-<img class="image" id="bacon" src="img/bacon.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('baconpic')); updatePrice(this)">
-<img class="image" id="pepperoni" src="img/pepperoni.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('pepperonipic')); updatePrice(this)">
+<img class="image" id="ham" src="img/Ham.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('hampic')); updatePrice(this, 2)">
+<img class="image" id="chicken" src="img/chicken.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('chickenpic')); updatePrice(this, 3)">
+<img class="image" id="bacon" src="img/bacon.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('baconpic')); updatePrice(this, 4)">
+<img class="image" id="pepperoni" src="img/pepperoni.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('pepperonipic')); updatePrice(this, 1)">
 <div></div>
-<img class="image" id="chorizo" src="img/chorizo.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('chorizopic')); updatePrice(this)">
-<img class="image" id="olives" src="img/olives.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('olivepic')); updatePrice(this)">
-<img class="image" id="onions" src="img/onions.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('onionpic')); updatePrice(this)">
-<img class="image" id="pepper" src="img/pepper.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('pepperpic')); updatePrice(this)">
+<img class="image" id="chorizo" src="img/chorizo.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('chorizopic')); updatePrice(this, 5)">
+<img class="image" id="olives" src="img/olives.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('olivepic')); updatePrice(this, 8)">
+<img class="image" id="onions" src="img/onions.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('onionpic')); updatePrice(this, 7)">
+<img class="image" id="pepper" src="img/pepper.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('pepperpic')); updatePrice(this, 10)">
 <div></div>
-<img class="image" id="pineapple" src="img/pineapple.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('pineapplepic')); updatePrice(this)">
-<img class="image" id="tomato" src="img/tomato.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('tomatopic')); updatePrice(this)">
+<img class="image" id="pineapple" src="img/pineapple.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('pineapplepic')); updatePrice(this, 9)">
+<img class="image" id="tomato" src="img/tomato.png" height="512" width="512" onclick="getToppingsList(this); toggle(document.getElementById('tomatopic')); updatePrice(this, 6)">
 </div>
 <table id="ToppingsTable"></table>
 
@@ -38,8 +38,9 @@
     <img class = "pizzatops" id="tomatopic" src="img/TomatoLayer.png" height="549" width="844" style = "visibility:hidden"/>
 </div>
 
+
 <div class="pricetext">
-    <p id="pricetext">5.00</p>
+    <p id="pricetext">£5.00</p>
 </div>
 
 

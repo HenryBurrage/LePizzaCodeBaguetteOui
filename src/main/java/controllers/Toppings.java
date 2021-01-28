@@ -41,17 +41,15 @@ public class Toppings{
 
     @GET
     @Path("get/{ToppingID}")                                                              // A path parameter in the method signature is used to capture the value added to the end of the URL. It is also added to the end of the @Path annotation.
-    public String GetUser(@PathParam("ToppingID") Integer ToppingID) {
-        System.out.println("Invoked Users.GetUser() with ToppingID " + ToppingID);
+    public String GetPrice(@PathParam("ToppingID") Integer ToppingID) {
+        System.out.println("Invoked Users.GetPrice() with ToppingID " + ToppingID);
         try {
-            PreparedStatement ps = server.Main.db.prepareStatement("SELECT ToppingName, ToppingPrice FROM Toppings WHERE ToppingID = ?");          // Prepared statement. Binds the ? with an actual
+            PreparedStatement ps = server.Main.db.prepareStatement("SELECT ToppingPrice FROM Toppings WHERE ToppingID = ?");          // Prepared statement. Binds the ? with an actual
             ps.setInt(1, ToppingID);                                                                                            // value, UserID, before it is executed.
             ResultSet results = ps.executeQuery();
             JSONObject response = new JSONObject();                                    // There is no need for an array as there is only one object, if no user matches the ID supplied, an empty object will be returned.
             if (results.next()== true) {
-                response.put("ToppingID", ToppingID);
-                response.put("ToppingName", results.getString(1));
-                response.put("ToppingPrice", results.getInt(2));
+                response.put("ToppingPrice", results.getInt(1));
             }
             return response.toString();
         } catch (Exception exception) {

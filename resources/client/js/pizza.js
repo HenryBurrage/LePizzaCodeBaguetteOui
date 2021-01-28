@@ -45,13 +45,30 @@ function toggle(element){
     }
 }
 
-function updatePrice(){
-    let text = document.getElementById("pricetext");
-    console.log((text));
-    if (element.style.filter == "grayscale(0%)") {
-        text.innerHTML = text.value += 1;
-    } else {
-        text.innerHTML = text.value -= 1;
-    }
+function updatePrice(element, toppingID) {
+    debugger;
+    console.log(toppingID);
+    const url = "/toppings/get/"
+    fetch(url + toppingID, {                // toppingID as a path parameter
+        method: "GET",
+    }).then(response => {
+        return response.json();                         //return response to JSON
+    }).then(response => {
+        if (response.hasOwnProperty("Error")) {         //checks if response from server has an "Error"
+            alert(JSON.stringify(response));            // if it does, convert JSON object to string and alert
+        } else {
+            var topping = parseFloat(response.ToppingPrice);
+            var text = document.getElementById("pricetext");
+            var currentPrice = parseFloat(text.innerHTML.substring(1));
+            var addedPrice = parseFloat((topping / 100).toFixed(2));
+            console.log(addedPrice);
+            if (element.style.filter == "grayscale(0%)") {
+                text.innerHTML = "£" + String(parseFloat(currentPrice += addedPrice).toFixed(2));
+            } else {
+                text.innerHTML = "£" + String(parseFloat(currentPrice -= addedPrice).toFixed(2));
+            }
+
+        }
+    })
 }
 
