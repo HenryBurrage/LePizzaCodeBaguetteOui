@@ -62,15 +62,14 @@ public class Users{
 
     @POST
     @Path("add")
-    public String UsersAdd(@FormDataParam("Email") String Email, @FormDataParam("Password") String Password, @FormDataParam("AddressLine1") String AddressLine1, @FormDataParam("AddressLine2") String AddressLine2, @FormDataParam("Admin") Boolean Admin) {         // The @FormDataParams come from the HTML form sent with the fetch(), they match the HTML form field names.
+    public String UsersAdd(@FormDataParam("Email") String Email, @FormDataParam("Password") String Password, @FormDataParam("AddressLine1") String AddressLine1, @FormDataParam("AddressLine2") String AddressLine2) {         // The @FormDataParams come from the HTML form sent with the fetch(), they match the HTML form field names.
         System.out.println("Invoked Users.UsersAdd()");
         try {
-            PreparedStatement ps = server.Main.db.prepareStatement("INSERT INTO Users (Email, Password, AddressLine1, AddressLine2, Admin) VALUES (?, ?, ?, ?, ?)");
+            PreparedStatement ps = server.Main.db.prepareStatement("INSERT INTO Users (Email, Password, AddressLine1, AddressLine2) VALUES (?, ?, ?, ?)");
             ps.setString(1, Email);
             ps.setString(2, Password);
             ps.setString(3, AddressLine1);
             ps.setString(4, AddressLine2);
-            ps.setBoolean(5, Admin);
             ps.execute();
             return "{\"OK\": \"Added user.\"}";
         } catch (Exception exception) {

@@ -58,7 +58,7 @@ function addUser() {
         if (response.hasOwnProperty("Error")) {
             alert(JSON.stringify(response));
         } else {
-            window.open("/client/welcome.html", "_self");   //URL replaces the current page.  Create a new html file
+            window.open("/client/login.html", "_self");   //URL replaces the current page.  Create a new html file
         }                                                  //in the client folder called welcome.html
     });
 }

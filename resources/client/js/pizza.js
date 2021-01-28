@@ -45,12 +45,13 @@ function toggle(element){
     }
 }
 
-function updatePrice(element){
-    let text = document.getElementsByClassName("pricetext");
-    console.log(parseFloat(text));
+function updatePrice(){
+    let text = document.getElementById("pricetext");
+    console.log((text));
     if (element.style.filter == "grayscale(0%)") {
         text.innerHTML = text.value += 1;
     } else {
-        text.innerHTML = text -= 1;
+        text.innerHTML = text.value -= 1;
     }
 }
+

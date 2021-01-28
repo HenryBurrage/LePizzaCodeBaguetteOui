@@ -25,3 +25,17 @@
     box-shadow: 0 4px #9b9b9b;
     transform: translateY(5px);
 }
+
+.pizzabutton {
+    cursor: pointer;
+    width: 25%;
+    height: 25%;
+}
+
+.pizzabutton:hover {
+    transform: scale(1.05,1.05);
+}
+
+.pizzabutton:active {
+    transform: scale(1.15,1.15);
+}
